@@ -13,3 +13,8 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+go.sum
+Day_1/graph.png
+Day_1/graph.svg
+example/
+re2c_example/
