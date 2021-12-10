@@ -10,7 +10,7 @@ func asInt(data *[]byte, pos int) int8 {
 	return value
 }
 
-func getClosingBracket(in byte) byte {
+func GetClosingBracket(in byte) byte {
 	switch in {
 	case '<':
 		return '>'
@@ -38,11 +38,11 @@ func printError(str *[]byte, start int, end int) {
 	panic("Unexpected Input")
 }
 
-func Parse(input *[]byte) [][]int8 {
+func Parse(input *[]byte) ([][]byte, []byte, []int, [][]byte) {
 	return lex(input)
 }
 
-func ParseFile(filename string) [][]int8 {
+func ParseFile(filename string) ([][]byte, []byte, []int, [][]byte) {
 	data, err := os.ReadFile(filename)
 	if err != nil {
 		panic(err)
